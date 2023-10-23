@@ -4,12 +4,12 @@ import UsersList from "../components/UsersLists/UsersList";
 const Home = () => {
   return (
     <div>
-      <h1 className="text-center mt-5 text-2xl">USER MANAGEMENT</h1>
+      <h1 className="text-center mt-5 text-2xl font-bold text-indigo-500">USER MANAGEMENT</h1>
       <main className="md:container lg:container mx-auto p-5 grid grid-cols-2 gap-5 mt-12">
         <section className="p-5 rounded border h-[450px]">
           <AddUserForm />
         </section>
-        <section className="p-3">
+        <section className="px-3">
           <UsersList />
         </section>
       </main>
@@ -18,13 +18,3 @@ const Home = () => {
 };
 
 export default Home;
-
-/* <h1 className="text-center mt-5 text-2xl">USER MANAGEMENT</h1>
-      <main className="md:container lg:container mx-auto p-5 grid grid-cols-2 gap-5 mt-12">
-        <section className="p-5 rounded border h-[450px]">
-          <AddUserForm />
-        </section>
-        <section className="p-3">
-          <UsersList />
-        </section>
-      </main> */

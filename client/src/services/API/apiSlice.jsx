@@ -10,12 +10,28 @@ export const apiSlice = createApi({
       providesTags: ["Users"],
     }),
 
+    // --- get single user ---
+    getSingleUser: builder.query({
+      query: (id) => `/user/${id}`,
+      providesTags: ["SingleUser"],
+    }),
+
     // --- create new user ---
     createUser: builder.mutation({
       query: (data) => ({
         url: "/user",
         method: "POST",
         body: data,
+      }),
+      invalidatesTags: ["Users", "SingleUser"],
+    }),
+
+    // --- update user ---
+    updateUser: builder.mutation({
+      query: ({ userId, updatedData }) => ({
+        url: `user/${userId}`,
+        method: "PATCH",
+        body: updatedData,
       }),
       invalidatesTags: ["Users"],
     }),
@@ -34,6 +50,8 @@ export const apiSlice = createApi({
 
 export const {
   useGetUsersQuery,
+  useGetSingleUserQuery,
   useCreateUserMutation,
+  useUpdateUserMutation,
   useDeleteUserMutation,
 } = apiSlice;

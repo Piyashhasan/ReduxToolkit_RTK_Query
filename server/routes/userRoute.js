@@ -12,7 +12,7 @@ const userRoute = express.Router();
 userRoute.post("/", createUser);
 
 // #GET USER
-userRoute.get("/", getUsers);
+userRoute.get("/", getUsers);  
 
 // #GET USER BY ID
 userRoute.get("/:id", getSingleUser);

@@ -22,7 +22,7 @@ const AddUserForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Access your values here from the inputValues object
-    // console.log(userData);
+    
     addUser(userData);
     setUserData({
       name: "",

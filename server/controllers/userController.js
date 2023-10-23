@@ -4,6 +4,7 @@ const Users = require("../models/userModels");
 exports.createUser = async (req, res) => {
   try {
     const { name, email, phone, address, about } = req.body;
+   
     const newUser = new Users({
       name,
       email,
@@ -77,6 +78,7 @@ exports.updateUser = async (req, res) => {
     const updateUser = await Users.findByIdAndUpdate(id, body, {
       new: true,
     });
+
     if (!updateUser) {
       res.status(404).send({
         status: false,
