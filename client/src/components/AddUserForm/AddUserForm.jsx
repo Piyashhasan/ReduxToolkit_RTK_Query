@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useCreateUserMutation } from "../../services/API/apiSlice";
+import toast from "react-hot-toast";
 
 const AddUserForm = () => {
+  const [addUser, { isLoading, isSuccess, isError }] = useCreateUserMutation();
+
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -18,7 +22,8 @@ const AddUserForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Access your values here from the inputValues object
-    console.log(userData);
+    // console.log(userData);
+    addUser(userData);
     setUserData({
       name: "",
       email: "",
@@ -27,6 +32,21 @@ const AddUserForm = () => {
       about: "",
     });
   };
+
+  // --- handle toast ---
+  useEffect(() => {
+    if (isLoading) {
+      toast.loading("Loading ...", { id: "users" });
+    }
+    if (isSuccess) {
+      toast.success("Successfully add user ", { id: "users" });
+    }
+
+    if (!isLoading && !isSuccess && isError) {
+      toast.error("User not add..", { id: "users" });
+    }
+  }, [isLoading, isSuccess, isError]);
+
   return (
     <div className="">
       <h1>--- ADD USER ---</h1>
