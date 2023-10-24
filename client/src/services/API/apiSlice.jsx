@@ -3,6 +3,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
   reducerPath: "users",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000" }),
+  tagTypes: ["Users"],
+
   endpoints: (builder) => ({
     // --- get all user ---
     getUsers: builder.query({
@@ -13,7 +15,6 @@ export const apiSlice = createApi({
     // --- get single user ---
     getSingleUser: builder.query({
       query: (id) => `/user/${id}`,
-      providesTags: ["SingleUser"],
     }),
 
     // --- create new user ---
@@ -23,7 +24,7 @@ export const apiSlice = createApi({
         method: "POST",
         body: data,
       }),
-      invalidatesTags: ["Users", "SingleUser"],
+      invalidatesTags: ["Users"],
     }),
 
     // --- update user ---

@@ -3,6 +3,7 @@ import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home";
 import UpdateUserForm from "../components/UpdateUserForm/UpdateUserForm";
 import UserDetails from "../pages/UserDetails";
+import NotFound from "../components/NotFound/NotFound";
 
 const routes = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const routes = createBrowserRouter([
       {
         path: "user-details/:id",
         element: <UserDetails />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },

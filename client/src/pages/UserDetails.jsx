@@ -4,7 +4,10 @@ import { useGetSingleUserQuery } from "../services/API/apiSlice";
 const UserDetails = () => {
   // --- user id get from URL ---
   const { id } = useParams();
-  const { data } = useGetSingleUserQuery(id);
+  const { data } = useGetSingleUserQuery(id, {
+    refetchOnMountOrArgChange: true,
+  });
+
 
   return (
     <main className="md:container lg:container mx-auto p-5">
