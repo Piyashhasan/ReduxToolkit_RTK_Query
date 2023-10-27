@@ -28,7 +28,7 @@ function App() {
   };
 
   return (
-    <div className="h-auto sm:h-screen pt-3 dark:bg-[#212129]">
+    <div className="h-auto sm:h-screen pt-3 dark:bg-[#0F172A]">
       <Toaster />
       <Provider store={store}>
         <ThemeController value={{ handleTheme, theme }}>
