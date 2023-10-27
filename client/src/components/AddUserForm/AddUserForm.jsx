@@ -22,7 +22,7 @@ const AddUserForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Access your values here from the inputValues object
-    
+
     addUser(userData);
     setUserData({
       name: "",
@@ -48,11 +48,12 @@ const AddUserForm = () => {
   }, [isLoading, isSuccess, isError]);
 
   return (
-    <div className="">
+    <div className="p-5">
       <h1>--- ADD USER ---</h1>
       <div className="mt-5">
-        <form onSubmit={handleSubmit} className="">
-          <div className="flex items-center justify-between gap-5">
+        <form onSubmit={handleSubmit}>
+
+          <div className="flex-none items-center justify-between gap-5 sm:flex">
             <div className="mb-3 w-full">
               <label
                 htmlFor="email"
@@ -89,7 +90,7 @@ const AddUserForm = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between gap-5">
+          <div className="flex-none items-center justify-between gap-5 sm:flex">
             <div className="mb-3 w-full">
               <label
                 htmlFor="email"
@@ -141,6 +142,7 @@ const AddUserForm = () => {
               placeholder="about your self..."
             ></textarea>
           </div>
+
           <button
             type="submit"
             className="text-white bg-indigo-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm w-full sm:w-auto px-5 py-2.5 text-center"

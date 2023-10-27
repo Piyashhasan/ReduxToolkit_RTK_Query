@@ -38,27 +38,27 @@ const UsersList = () => {
         return (
           <div
             key={_id}
-            className="p-2 flex items-center justify-between border rounded mb-3"
+            className="p-2 flex-none items-center justify-between border rounded mb-3 sm:flex "
           >
             <div className="">
               <p>Name : {name}</p>
               <p>Email : {email}</p>
               <p>Phone: {phone}</p>
             </div>
-            <div className="space-x-2">
+            <div className="flex items-center justify-center gap-2 mt-2">
               <Link to={`/user-details/${_id}`}>
-                <button className="text-white bg-indigo-400  hover:bg-indigo-600 focus:outline-none font-medium text-sm w-full sm:w-auto px-5 py-2 text-center rounded-full">
+                <button className="text-white bg-indigo-400  hover:bg-indigo-600 focus:outline-none font-medium text-sm px-5 py-2 text-center rounded-full">
                   <GrCircleInformation className="text-xl" />
                 </button>
               </Link>
               <Link to={`/update/${_id}`}>
-                <button className="text-white bg-green-500 hover:bg-green-800 focus:outline-none font-medium text-sm w-full sm:w-auto  px-5 py-2 text-center rounded-full">
+                <button className="text-white bg-green-500 hover:bg-green-800 focus:outline-none font-medium text-sm  px-5 py-2 text-center rounded-full">
                   <BiEditAlt className="text-xl" />
                 </button>
               </Link>
               <button
                 onClick={() => deleteUser(_id)}
-                className="text-white bg-red-700 hover:bg-red-800 focus:outline-none font-medium text-sm w-full sm:w-auto px-5 py-2 text-center rounded-full"
+                className="text-white bg-red-700 hover:bg-red-800 focus:outline-none font-medium text-sm px-5 py-2 text-center rounded-full"
               >
                 <AiFillDelete className="text-xl" />
               </button>
