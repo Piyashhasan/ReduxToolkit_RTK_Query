@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import {
   useGetSingleUserQuery,
   useUpdateUserMutation,
@@ -70,12 +70,6 @@ const UpdateUserForm = () => {
 
   return (
     <main className="md:container lg:container mx-auto p-5">
-      <Link to="/">
-        <button className="bg-indigo-500 px-5 py-2 text-xl text-white rounded hover:bg-indigo-600">
-          Back
-        </button>
-      </Link>
-
       <div className="mt-10 w-[600px] mx-auto border p-5 rounded">
         <h1 className="text-center text-indigo-500 text-xl font-semibold mb-5">
           UPDATE INFORMATION

@@ -48,11 +48,10 @@ const AddUserForm = () => {
   }, [isLoading, isSuccess, isError]);
 
   return (
-    <div className="p-5">
+    <div className="p-5 dark:text-white">
       <h1>--- ADD USER ---</h1>
       <div className="mt-5">
         <form onSubmit={handleSubmit}>
-
           <div className="flex-none items-center justify-between gap-5 sm:flex">
             <div className="mb-3 w-full">
               <label

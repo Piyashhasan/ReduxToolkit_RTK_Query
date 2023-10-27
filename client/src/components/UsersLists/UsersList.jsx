@@ -38,14 +38,14 @@ const UsersList = () => {
         return (
           <div
             key={_id}
-            className="p-2 flex-none items-center justify-between border rounded mb-3 sm:flex "
+            className="p-2 flex-none items-center justify-between border rounded mb-3 sm:flex dark:text-white"
           >
             <div className="">
               <p>Name : {name}</p>
               <p>Email : {email}</p>
               <p>Phone: {phone}</p>
             </div>
-            <div className="flex items-center justify-center gap-2 mt-2">
+            <div className="flex items-center justify-center gap-2 my-3 sm:mt-0">
               <Link to={`/user-details/${_id}`}>
                 <button className="text-white bg-indigo-400  hover:bg-indigo-600 focus:outline-none font-medium text-sm px-5 py-2 text-center rounded-full">
                   <GrCircleInformation className="text-xl" />

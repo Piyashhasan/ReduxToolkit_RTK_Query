@@ -22,11 +22,11 @@ const routes = createBrowserRouter([
         path: "user-details/:id",
         element: <UserDetails />,
       },
-      {
-        path: "*",
-        element: <NotFound />,
-      },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 
