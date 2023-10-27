@@ -14,7 +14,7 @@ const UserDetails = () => {
         <h1 className="text-center text-2xl font-semibold text-indigo-600">
           User Details
         </h1>
-        <div className="text-lg space-y-3 mt-4">
+        <div className="text-lg space-y-3 mt-4 text-justify">
           <p>Name: {data?.users?.name}</p>
           <p>Email: {data?.users?.email}</p>
           <p>Phone: {data?.users?.phone}</p>
