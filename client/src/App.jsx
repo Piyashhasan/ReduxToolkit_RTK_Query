@@ -14,7 +14,18 @@ function App() {
     initFlowbite();
   }, []);
 
+  // --- Theme state ---
   const [theme, setTheme] = useState("light");
+  // --- PC Default theme ---
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  // --- Handle theme by clicking Button ---
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");

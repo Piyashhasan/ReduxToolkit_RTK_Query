@@ -8,7 +8,7 @@ const NavBar = () => {
     <div className="grid grid-cols-2 bg-indigo-300 py-3 mx-1 mb-5 rounded-full">
       <div className="">
         <Link to="/">
-          <h1 className="mx-5 text-sm sm:text-xl hover:text-indigo-700">
+          <h1 className="font-['Agbalumo'] mx-5 italic text-sm sm:text-xl hover:text-indigo-700">
             User Management
           </h1>
         </Link>
