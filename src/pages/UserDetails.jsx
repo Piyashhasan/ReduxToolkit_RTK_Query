@@ -9,8 +9,8 @@ const UserDetails = () => {
   });
 
   return (
-    <main className="md:container lg:container mx-auto p-5 dark:text-white">
-      <div className="mt-10 border rounded p-5 w-[600px] mx-auto">
+    <main className="min-h-screen md:container lg:container mx-auto p-5 dark:text-white">
+      <div className="mt-10 max-w-[600px border rounded p-5 mx-auto">
         <h1 className="text-center text-2xl font-semibold text-indigo-600">
           User Details
         </h1>

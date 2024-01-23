@@ -69,8 +69,8 @@ const UpdateUserForm = () => {
   }, [isSuccess, isError]);
 
   return (
-    <main className="md:container lg:container mx-auto p-5">
-      <div className="mt-10 w-[600px] mx-auto border p-5 rounded">
+    <main className="min-h-screen md:container lg:container mx-auto p-5">
+      <div className="mt-10 max-w-[600px] mx-auto border p-5 rounded">
         <h1 className="text-center text-indigo-500 text-xl font-semibold mb-5">
           UPDATE INFORMATION
         </h1>
