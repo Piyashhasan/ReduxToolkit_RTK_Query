@@ -9,7 +9,7 @@ const NavBar = () => {
       <div className="">
         <Link to="/">
           <h1 className="font-['Agbalumo'] mx-5 italic text-[12px] sm:text-xl hover:text-indigo-700">
-            User Management
+            CRUD OPERATION
           </h1>
         </Link>
       </div>
